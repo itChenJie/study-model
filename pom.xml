@@ -19,7 +19,8 @@
 <!--        <module>rabbitMQ/producer</module>-->
 <!--        <module>rabbitMQ/consumers</module>-->
         <module>Java进阶</module>
-<!--        <module>crawler-model-cn.itcast.jd</module>-->
+        <module>RedisDemo</module>
+        <!--        <module>crawler-model-cn.itcast.jd</module>-->
 <!--        <module>crawler-model-cn.itcast.jd</module>-->
 <!--        <module>crawler-model/itcast-crawler-job</module>-->
     </modules>

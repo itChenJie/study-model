@@ -1,0 +1,7 @@
+spring:
+  redis:
+    host: 49.233.201.120
+    password: zaq!@#456.
+    port: 6379
+#database连接O库 不设置则默认连接O库
+    database: 0

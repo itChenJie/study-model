@@ -8,14 +8,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="consumers" />
-        <module name="thread-pool-task" />
         <module name="crawler-model-jod" />
         <module name="springBoot-rabbitmq" />
-        <module name="producer" />
-        <module name="crawler-model-jd" />
-        <module name="crawler-model" />
-        <module name="Java进阶" />
         <module name="exercises" />
+        <module name="crawler-model-jd" />
+        <module name="thread-pool-task" />
+        <module name="producer" />
+        <module name="RedisDemo" />
+        <module name="Java进阶" />
+        <module name="crawler-model" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -26,6 +27,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Java进阶" options="-parameters" />
+      <module name="RedisDemo" options="-parameters" />
       <module name="consumers" options="-parameters" />
       <module name="crawler-model" options="-parameters" />
       <module name="crawler-model-jd" options="-parameters" />
