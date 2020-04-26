@@ -6,6 +6,7 @@
 - [rabbitMQ](#rabbitMQ)
 - [线程池](#springBoot创建线程池bean)    
 - [redis使用](#springBoot集成redis)
+- [mongodb使用](#springBoot集成mongodb)
 ### java爬虫工具包的使用
 ####  Jsoup工具包
 **jsoup** 是一款Java 的HTML解析器，可直接解析某个URL地址、HTML文本内容。它提供了一套非常省力的API，可通过DOM，CSS以及类似于jQuery的操作方法来取出和操作数据。
@@ -89,9 +90,25 @@
 ### springBoot集成redis
 
 `<dependencies>
+        
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
     </dependencies>
     `
+### springBoot集成mongodb    
+`
+    <dependencies>
+        
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>19.0</version>
+        </dependency>
+    </dependencies>`
