@@ -1,11 +1,11 @@
-#个人学习内容
+# 个人学习内容
 
 - [爬虫](#java爬虫工具包的使用)
 - [大厂机试题](#大厂机试题)
 - [Java进阶](#(Java进阶)主要是一些工具API，多线程，JVM的学习用例和笔记)
 - [rabbitMQ](#rabbitMQ)
 - [线程池](#springBoot创建线程池bean)    
-###java爬虫工具包的使用
+### java爬虫工具包的使用
 ####  Jsoup工具包
 **jsoup** 是一款Java 的HTML解析器，可直接解析某个URL地址、HTML文本内容。它提供了一套非常省力的API，可通过DOM，CSS以及类似于jQuery的操作方法来取出和操作数据。
  
@@ -25,7 +25,7 @@
 
  </dependency>`
  
-####WebMagic
+#### WebMagic
     
 **WebMagic**的结构分为**Downloader**、**PageProcessor**、**Scheduler**、**Pipeline**四大组件，
 并由Spider将它们彼此组织起来。这四大组件对应爬虫生命周期中的下载、处理、
@@ -77,10 +77,10 @@
   
       </dependencies>
       `
-###大厂机试题
-###(Java进阶)主要是一些工具API，多线程，JVM的学习用例和笔记
-##rabbitMQ
-####springBoot集成rabbitMQ
+### 大厂机试题
+### (Java进阶)主要是一些工具API，多线程，JVM的学习用例和笔记
+## rabbitMQ
+#### springBoot集成rabbitMQ
 
-##springBoot创建线程池bean
+## springBoot创建线程池bean
 创建线程池并且使用消息异步发送
