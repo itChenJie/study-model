@@ -20,6 +20,7 @@
 <!--        <module>rabbitMQ/consumers</module>-->
         <module>Java进阶</module>
         <module>RedisDemo</module>
+        <module>mongodbDemo</module>
         <!--        <module>crawler-model-cn.itcast.jd</module>-->
 <!--        <module>crawler-model-cn.itcast.jd</module>-->
 <!--        <module>crawler-model/itcast-crawler-job</module>-->
@@ -64,6 +65,7 @@
                     <artifactId>junit-vintage-engine</artifactId>
                 </exclusion>
             </exclusions>
+
         </dependency>
 
         <dependency>
