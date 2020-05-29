@@ -14,7 +14,7 @@ public class OrderTaskServic {
     @Autowired
     private ThreadTaskService taskService;
 
-    public void orderTask() throws InterruptedException {
+    public void orderTask(String s) throws InterruptedException {
         this.cancelOrder();
         taskService.sendMessage();
         taskService.sendMessage2();
