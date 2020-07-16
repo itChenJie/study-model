@@ -1,0 +1,8 @@
+spring:
+  data:
+    mongodb:
+      host: 49.233.201.120
+      username: root
+      password: zaq!@#456
+      port: 27017
+      database: admin

@@ -1,0 +1,15 @@
+management:
+  endpoint:
+    shutdown:
+      enabled: true #最特殊的监控端点 开启关闭应用端点，只能用post请求
+  endpoints:
+    web:
+      exposure:
+        include: "*" #打开所有的监控点
+#*/actuator/health 健康检查的接口
+#*/actuator/info 应用程序的一些信息 默认是返回一个空的json 具体信息要自己配置
+info:
+  app:
+    name: spring-boot-demo
+    groupId: org.springframework.boot
+    version: 2.2.7.RELEASE

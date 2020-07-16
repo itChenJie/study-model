@@ -1,4 +1,4 @@
-package com.Lambda;
+package main.java.com.Lambda;
 
 /**
  * @Author ChenWenJie
@@ -7,5 +7,5 @@ package com.Lambda;
  * @Date 2020/4/14 15:25
  */
 public interface SkuPredicate {
-    boolean test(Sku sku);
+    boolean test(com.Lambda.Sku sku);
 }

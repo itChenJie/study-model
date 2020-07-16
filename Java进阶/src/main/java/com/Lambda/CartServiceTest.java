@@ -1,8 +1,8 @@
-package com.Lambda;
+package main.java.com.Lambda;
 
 
 import com.alibaba.fastjson.JSON;
-
+import com.Lambda.Sku;
 import java.util.List;
 
 /**
@@ -17,7 +17,7 @@ public class CartServiceTest {
     public static void main(String[] args) {
         CartService service = new CartService();
         List<Sku> list = service.filterSkus(service.getCartSkuList(),
-                (Sku sku)->sku.getTotalPrice()<2000);
+                (sku)->sku.getTotalPrice()<2000);
         System.out.println(JSON.toJSONString(list,true));
     }
 

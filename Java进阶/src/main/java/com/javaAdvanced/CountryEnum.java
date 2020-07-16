@@ -1,4 +1,4 @@
-package com.javaAdvanced;
+package main.java.com.javaAdvanced;
 
 /**
  * @Classname CountryEnum

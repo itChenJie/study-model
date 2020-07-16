@@ -1,4 +1,5 @@
-package com.validation框架;
+package main.java.com.validation;
+
 
 import org.junit.After;
 import org.junit.Before;
@@ -14,7 +15,6 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Set;
-
 /**
  * @Author ChenWenJie
  * @Classname ValidationTest

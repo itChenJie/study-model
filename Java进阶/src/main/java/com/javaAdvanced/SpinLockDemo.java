@@ -1,4 +1,4 @@
-package com.javaAdvanced;
+package main.java.com.javaAdvanced;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;

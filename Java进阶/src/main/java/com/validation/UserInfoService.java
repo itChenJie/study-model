@@ -1,4 +1,4 @@
-package com.validation框架;
+package main.java.com.validation;
 
 import javax.validation.Valid;
 

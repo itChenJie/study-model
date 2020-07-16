@@ -1,0 +1,10 @@
+#docker-cluster
+spring:
+  es:
+    host: 49.233.201.120:9300
+    port: 9300
+  elasticsearch:
+    rest:
+      uris:
+        http: 49.233.201.120:9200
+      username: docker-cluster

@@ -14,6 +14,7 @@
         <module name="rabbitmq" />
         <module name="crawler-model" />
         <module name="spring-boot-demo" />
+        <module name="Java进阶" />
         <module name="exercises" />
       </profile>
       <profile name="Annotation profile for study-model" enabled="true">
@@ -21,7 +22,6 @@
         <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="RedisDemo" />
-        <module name="Java进阶" />
         <module name="mongodbDemo" />
       </profile>
       <profile name="Annotation profile for rabbitmq" enabled="true">
@@ -34,10 +34,6 @@
         <module name="crawler-model-jd" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="crawler-model-job" target="1.8" />
-      <module name="rabbitMQ" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -45,18 +41,14 @@
       <module name="RedisDemo" options="-parameters" />
       <module name="consumers" options="-parameters" />
       <module name="crawler" options="-parameters" />
-      <module name="crawler-model" options="-parameters" />
       <module name="crawler-model-jd" options="-parameters" />
-      <module name="crawler-model-job" options="-parameters" />
       <module name="crawler-model-jod" options="-parameters" />
       <module name="es" options="-parameters" />
       <module name="exercises" options="-parameters" />
       <module name="mongodbDemo" options="-parameters" />
       <module name="producer" options="-parameters" />
-      <module name="rabbitMQ" options="-parameters" />
       <module name="rabbitmq" options="-parameters" />
       <module name="spring-boot-demo" options="-parameters" />
-      <module name="springBoot-rabbitmq" options="-parameters" />
       <module name="thread-pool-task" options="-parameters" />
     </option>
   </component>

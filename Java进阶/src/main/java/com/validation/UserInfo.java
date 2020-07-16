@@ -1,4 +1,4 @@
-package com.validation框架;
+package main.java.com.validation;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.GroupSequence;
+import javax.validation.constraints.*;
 import javax.validation.groups.Default;
 import java.util.Date;
 import java.util.List;
@@ -51,7 +52,7 @@ public class UserInfo {
     @Max(value = 60,message = "年龄不能大于60岁")
     private Integer age;
 
-    @Phone(message = "手机号校验错误")
+    @com.validation框架.Phone(message = "手机号校验错误")
     private String phone;
 
     @Past(message = "生日不能是一个未来日期")

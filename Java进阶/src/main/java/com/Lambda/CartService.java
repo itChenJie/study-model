@@ -1,8 +1,9 @@
-package com.Lambda;
+package main.java.com.Lambda;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import com.Lambda.Sku;
+import com.Lambda.SkuCategoryEnum;
 /**
  * @Author ChenWenJie
  * @Classname CartService
@@ -13,7 +14,7 @@ public class CartService {
 
     public static List<Sku> cartSkuList = new ArrayList<Sku>(){
         {
-            add(new Sku(6213,"无人机",4999.00,1,4900.00, SkuCategoryEnum.ELECTRONICS));
+            add(new Sku(6213,"无人机",4999.00,1,4900.00,SkuCategoryEnum.ELECTRONICS));
             add(new Sku(6214,"VR一体机",2999.00,1,2900.00, SkuCategoryEnum.ELECTRONICS));
             add(new Sku(6215,"衬衣",199.00,1,199.00, SkuCategoryEnum.CLOTHING));
             add(new Sku(6216,"短袖",99.00,1,99.00, SkuCategoryEnum.CLOTHING));
@@ -66,7 +67,7 @@ public class CartService {
      * @param predicate 不同的Sku判断标准策略
      * @return
      */
-    public List<Sku> filterSkus(List<Sku> cartSkuList,SkuPredicate predicate){
+    public List<Sku> filterSkus(List<Sku> cartSkuList, SkuPredicate predicate){
         ArrayList<Sku> result = new ArrayList<>();
         for (Sku sku : cartSkuList) {
             if(predicate.test(sku)){
