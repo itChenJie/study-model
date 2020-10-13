@@ -10,6 +10,7 @@
         <module name="es" />
         <module name="crawler" />
         <module name="springBoot-rabbitmq" />
+        <module name="crawler-model-jd" />
         <module name="thread-pool-task" />
         <module name="rabbitmq" />
         <module name="crawler-model" />
@@ -31,7 +32,6 @@
         <module name="consumers" />
         <module name="crawler-model-jod" />
         <module name="producer" />
-        <module name="crawler-model-jd" />
       </profile>
     </annotationProcessing>
   </component>

@@ -1,4 +1,6 @@
-package com.Lambda;
+package main.java.com.Lambda;
+
+import main.java.com.Lambda.Sku;
 
 /**
  * @Author ChenWenJie
@@ -11,4 +13,6 @@ public class SkuBooksCategoryPredicate implements SkuPredicate {
     public boolean test(Sku sku) {
         return SkuCategoryEnum.BOOKS.equals(sku.getSkuCategory());
     }
+
+
 }

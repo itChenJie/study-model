@@ -2,7 +2,7 @@ package main.java.com.Lambda;
 
 
 import com.alibaba.fastjson.JSON;
-import com.Lambda.Sku;
+import main.java.com.Lambda.Sku;
 import java.util.List;
 
 /**

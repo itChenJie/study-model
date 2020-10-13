@@ -1,4 +1,4 @@
-package com.Lambda;
+package main.java.com.Lambda;
 
 import lombok.Getter;
 
