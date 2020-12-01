@@ -1,6 +1,7 @@
 package com.redis.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
 
@@ -17,6 +18,9 @@ public class RedisUilts {
 
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
+
+    @Autowired
+    private RedisTemplate redisTemplate;
 
     public void setString(String key,String value){
         setString(key, value, Long.valueOf(1*60*60*24));

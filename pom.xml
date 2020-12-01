@@ -21,6 +21,7 @@
         <module>Java进阶</module>
         <module>RedisDemo</module>
         <module>mongodbDemo</module>
+        <module>RabbitmqDemo</module>
         <!--        <module>crawler-model-cn.itcast.jd</module>-->
 <!--        <module>crawler-model-cn.itcast.jd</module>-->
 <!--        <module>crawler-model/itcast-crawler-job</module>-->

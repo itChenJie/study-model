@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: rabbitMq
+  rabbitmq:
+    virtual-host: my_vhost
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin
+    listener:
+      simple:
+        #指定最小的消费者数量.
+        concurrency: 2
+        #指定最大的消费者数量
+        max-concurrency: 10
+        #开启ack，manual、 auto(默认)、none
+        acknowledge-mode: manual
+    template:
+      #支持消息的确认与返回
+      mandatory: true
+      # 发送确认
+    publisher-returns: true
+    # 发送回调
+    publisher-confirms: true
+server:
+  port: 8080
