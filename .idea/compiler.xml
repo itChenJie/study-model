@@ -7,30 +7,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="es" />
-        <module name="crawler" />
-        <module name="springBoot-rabbitmq" />
-        <module name="crawler-model-jd" />
-        <module name="thread-pool-task" />
-        <module name="rabbitmq" />
-        <module name="crawler-model" />
-        <module name="spring-boot-demo" />
+        <module name="crawler-model-jod" />
         <module name="Java进阶" />
         <module name="exercises" />
-      </profile>
-      <profile name="Annotation profile for study-model" enabled="true">
-        <sourceOutputDir name="../../target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
+        <module name="crawler-model" />
+        <module name="es" />
         <module name="RedisDemo" />
+        <module name="rabbitmq" />
+        <module name="crawler-model-jd" />
+        <module name="crawler" />
         <module name="mongodbDemo" />
-      </profile>
-      <profile name="Annotation profile for rabbitmq" enabled="true">
-        <sourceOutputDir name="../target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
+        <module name="springBoot-rabbitmq" />
+        <module name="spring-boot-demo" />
+        <module name="thread-pool-task" />
         <module name="consumers" />
-        <module name="crawler-model-jod" />
         <module name="producer" />
       </profile>
     </annotationProcessing>

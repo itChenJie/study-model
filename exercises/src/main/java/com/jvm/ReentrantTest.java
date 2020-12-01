@@ -5,7 +5,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * @Annotation
+ * @Annotation  algorithm
  * @ClassName ReentrantTest
  * @Author ChenWenJie
  * @Data 2020/5/8 3:12 下午
