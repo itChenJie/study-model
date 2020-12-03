@@ -14,8 +14,21 @@ import java.util.Map;
  * @Data 2020/12/1 3:49 下午
  **/
 @Component
-public class RabbitmqListener {
+public class RabbitmqListener implements Listener{
+    /**
+     * acknowledge-mode: manual
+     * 采用手动提交ack方式，当因抛出异常导致消费失败时，采用重试机制，
+     * 但也不能一直重试否则容易导致服务器挂掉，所以配置中使用max-attempts控制最大重试次数
+     * 为了保证最终的一致性要求，当消费次数达到最大重试次数时，根据使用场景的不同做出不同的处理机制
+     * 1：采用回调机制通知提供者服务进行事物的回滚。保证数据的最终一致性
+     * 2：入消费失败库进行存档，方便人工进入进行手动处理
+     * @param map
+     * @param channel
+     * @param message
+     * @throws IOException
+     */
     @RabbitListener(queues = "demo")
+    @Override
     public void listener(Map map, Channel channel, Message message) throws IOException {
         try {
             // 模拟执行任务
@@ -36,4 +49,6 @@ public class RabbitmqListener {
             e.printStackTrace();
         }
     }
+
+
 }

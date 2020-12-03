@@ -39,6 +39,13 @@ public class RabbitmqProvider implements RabbitTemplate.ConfirmCallback, RabbitT
         rabbitTemplate.convertAndSend(RabbitConfig.DEMO_EXCHANGE_NAME,RabbitConfig.DEMO_KEY,map);
     }
 
+    /**
+     *  # 发送确认
+     *   publisher-returns: true
+     * @param correlationData
+     * @param ack
+     * @param cause
+     */
     @Override
     public void confirm(CorrelationData correlationData, boolean ack, String cause) {
         if (ack) {

@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -38,6 +39,6 @@ public class RabbitmqApplication {
         Map map = new HashMap();
         map.put("AAA",111);
         map.put("BBB","你好!");
-        delayProvider.sendWaitPublished(map);
+        delayProvider.sendWaitPublished(map,new Date().toString());
     }
 }

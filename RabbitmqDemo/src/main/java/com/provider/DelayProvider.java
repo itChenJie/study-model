@@ -36,13 +36,25 @@ public class DelayProvider implements RabbitTemplate.ConfirmCallback, RabbitTemp
         rabbitTemplate.setReturnCallback(this);
     }
 
+    /**
+     *  # 发送确认
+     *   publisher-returns: true
+     * confirm机制确认生产者投递消息到MQ服务器是否成功
+     * 生产者投递消息到MQ服务器失败
+     *  解决：使用生产者重试机制进行发消息，注意幂等性问题。
+     * 幂等性问题
+     *  解决：使用
+     * @param correlationData
+     * @param ack
+     * @param cause
+     */
     @Override
     public void confirm(CorrelationData correlationData, boolean ack, String cause) {
         if (ack) {
             log.info("消息发送成功" + correlationData);
-            log.info("cause："+ cause);
         } else {
             log.info("消息发送失败:" + cause);
+
         }
     }
 
@@ -57,9 +69,9 @@ public class DelayProvider implements RabbitTemplate.ConfirmCallback, RabbitTemp
         log.info("消息使用的路由键 routing : " + routingKey);
     }
 
-    public void sendWaitPublished(Map map){
+    public void sendWaitPublished(Map map,String key){
         //id + 时间戳 全局唯一
-        CorrelationData correlationData = new CorrelationData("12345678909"+new Date());
+        CorrelationData correlationData = new CorrelationData("mark_"+key);
         //发送消息时指定  延迟时间
         rabbitTemplate.convertAndSend(RabbitConfig.DELAY_EXCHANGE, RabbitConfig.DELAY_KEY, map,
                 new MessagePostProcessor() {
@@ -67,7 +79,7 @@ public class DelayProvider implements RabbitTemplate.ConfirmCallback, RabbitTemp
                     public Message postProcessMessage(Message message) throws AmqpException {
                         //设置消息持久化
                         message.getMessageProperties().setDeliveryMode(MessageDeliveryMode.PERSISTENT);
-                        long delayTime= 1000*60;
+                        long delayTime= 3000;
                         message.getMessageProperties().setDelay((int) delayTime);
                         return message;
                     }
