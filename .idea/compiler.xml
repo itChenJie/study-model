@@ -12,6 +12,7 @@
         <module name="RabbitmqDemo" />
         <module name="crawler-model" />
         <module name="es" />
+        <module name="RedisDemo" />
         <module name="rabbitmq" />
         <module name="crawler-model-jd" />
         <module name="crawler" />
@@ -21,13 +22,14 @@
         <module name="springBoot-rabbitmq" />
         <module name="spring-boot-demo" />
         <module name="thread-pool-task" />
-        <module name="RedisDemo" />
+        <module name="Design-Patterns" />
         <module name="producer" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Design-Patterns" options="-parameters" />
       <module name="Java进阶" options="-parameters" />
       <module name="RabbitmqDemo" options="-parameters" />
       <module name="RedisDemo" options="-parameters" />
