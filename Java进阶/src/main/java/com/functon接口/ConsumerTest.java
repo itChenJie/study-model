@@ -21,7 +21,7 @@ public class ConsumerTest {
     }
 
     public static void main(String[] args) {
-        String[] strings = {"陈杰,男","华,女","婷,女"};
+        String[] strings = {"陈,男","华,女","婷,女"};
 
         printInfo(strings,(s)->{
             String name = s.split(",")[0];

@@ -23,6 +23,7 @@
         <module>mongodbDemo</module>
         <module>RabbitmqDemo</module>
         <module>Design-Patterns</module>
+        <module>Tool</module>
         <!--        <module>crawler-model-cn.itcast.jd</module>-->
 <!--        <module>crawler-model-cn.itcast.jd</module>-->
 <!--        <module>crawler-model/itcast-crawler-job</module>-->
@@ -69,7 +70,18 @@
             </exclusions>
 
         </dependency>
-
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.5.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>4.1.2</version>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>

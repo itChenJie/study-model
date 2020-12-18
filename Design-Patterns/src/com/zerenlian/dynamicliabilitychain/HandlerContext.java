@@ -11,9 +11,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Scope("prototype")
 public class HandlerContext {
-    // 上一个任务
     HandlerContext prev;
-    // 下一个任务
     HandlerContext next;
     Handler handler;
 

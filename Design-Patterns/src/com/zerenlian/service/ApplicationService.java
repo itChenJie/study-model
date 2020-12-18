@@ -6,6 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
 /**
  * @Description
  * @Author ChenWenJie
@@ -16,9 +20,10 @@ public class ApplicationService {
     @Autowired
     private ApplicationContext context;
 
-    public void mockedClient(){
-        Object request = new Object();
-        Pipeline pipeline = newPipeline(request);
+    public void mockedClient() throws FileNotFoundException {
+        File file = new File("/Users/chenjie/Desktop/Idea/study-model/人员导入.xlsx");
+        FileInputStream inputStream = new FileInputStream(file);
+        Pipeline pipeline = newPipeline(inputStream);
         try {
             pipeline.fireTaskReceived();
             pipeline.fireTaskFiltered();

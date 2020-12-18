@@ -40,7 +40,7 @@ import java.util.concurrent.*;
  * maximumPoolSize：线程池最大线程数，这个参数也是一个非常重要的参数，它表示在线程池中最多能创建多少个线程；
  *
  * keepAliveTime：表示线程没有任务执行时最多保持多久时间会终止。默认情况下，只有当线程池中的线程数大于corePoolSize时，
- * keepAliveTime才会起作用，直到线程池中的线程数不大于corePoolSize，即当线程池中的线程数大于corePoolSize时，
+ * keepAliveTime才会起作用，直到线程池中的线程数不大于corePoolSize，即当线程池中的线程数小于corePoolSize时，
  * 如果一个线程空闲的时间达到keepAliveTime，则会终止，直到线程池中的线程数不超过corePoolSize。
  * 但是如果调用了allowCoreThreadTimeOut(boolean)方法，在线程池中的线程数不大于corePoolSize时，
  * keepAliveTime参数也会起作用，直到线程池中的线程数为0；

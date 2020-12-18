@@ -17,9 +17,7 @@ public class MultithreadingSingleton {
                     solution = new MultithreadingSingleton();
                 }
             }
-
         }
-
         return solution;
     }
 

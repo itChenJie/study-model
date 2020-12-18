@@ -1,4 +1,4 @@
-package main.java.com.javaAdvanced;
+package com.javaAdvanced;
 
 import java.util.ArrayList;
 import java.util.Collections;

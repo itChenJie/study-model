@@ -5,7 +5,7 @@ package com.zerenlian.dynamicliabilitychain;
  * @Author ChenWenJie
  * @Data 2020/12/8 1:50 下午
  */
-public interface Pipeline {
+public interface Pipeline  {
     Pipeline fireTaskReceived();
 
     Pipeline fireTaskFiltered();

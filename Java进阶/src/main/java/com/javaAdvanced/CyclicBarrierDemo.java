@@ -22,8 +22,8 @@ public class CyclicBarrierDemo {
             int finalI = i;
             new Thread(()->{
                 System.out.println(finalI +"员工："+Thread.currentThread().getName() +"到了");
-                try {
                     //进行阻塞
+                try {
                     cyclicBarrier.await();
                 } catch (InterruptedException e) {
                     e.printStackTrace();

@@ -1,9 +1,14 @@
-package main.java.com.javaAdvanced;
+package com.javaAdvanced;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.atomic.AtomicStampedReference;
 
+/**
+ * CAS  ABA问题
+ * ABA 问题的解决方式是采用版本号的形式去解决，每次更改数据时
+ * 带上当前的版本号，和设置新的版本号，当当前版本号和内存中的版本号不一致时则更改失败并且重新获取内存中的值再进行比较和替换
+ */
 public class ABADemo {
     static AtomicReference<Integer> atomicReference = new AtomicReference<> (100);
 
@@ -35,6 +40,7 @@ public class ABADemo {
             int stamp = stampedReference.getStamp();
             System.out.println(Thread.currentThread().getName() +"\t第1次版本号"+stamp);
             try { TimeUnit.SECONDS.sleep(2); } catch (InterruptedException e) { e.printStackTrace(); }
+
             stampedReference.compareAndSet(100,101,stampedReference.getStamp(),stampedReference.getStamp()+1);
             System.out.println(Thread.currentThread().getName() +"\t第2次版本号"+stampedReference.getStamp());
             stampedReference.compareAndSet(101,100,stampedReference.getStamp(),stampedReference.getStamp()+1);
@@ -45,9 +51,10 @@ public class ABADemo {
             int stamp = stampedReference.getStamp();
             System.out.println(Thread.currentThread().getName() +"\t第1次版本号"+stamp);
             try { TimeUnit.SECONDS.sleep(4); } catch (InterruptedException e) { e.printStackTrace(); }
+
             boolean result=stampedReference.compareAndSet(100,2019,stamp,stamp+1);
             System.out.println(Thread.currentThread().getName() + "\t修改是否成功" + result);
-            System.out.println(atomicReference.get()+"\t最后一次版本号："+stampedReference.getStamp());
+            System.out.println(atomicReference.get()+"\t最后一次版本号："+stampedReference.getStamp()+"  而你给的版本号是："+stamp);
         },"t4").start();
     }
 }

@@ -15,7 +15,7 @@ package com.functon接口;
  *              不符合条件，返回false
  * @Date 2020/4/11 16:22
  */
-public class PredicateTest {
+public class  PredicateTest {
     public static boolean checkString(String s, Predicate<String> predicate){
         return predicate.test(s);
     }

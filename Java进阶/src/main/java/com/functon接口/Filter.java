@@ -21,11 +21,11 @@ public class Filter {
 
     public static void main(String[] args) {
         List<String[]> list = new ArrayList<>();
-        String[] s ={"陈杰,男","华,女","婷,女"};
+        String[] s ={"陈,男","华,女","婷,女"};
         list.add(s);
-        String[] s1 ={"陈杰,男","华,女","婷,女"};
+        String[] s1 ={"陈,男","华,女","婷,女"};
         list.add(s1);
-        String[] s2 ={"陈杰,男","华,女","婷,女"};
+        String[] s2 ={"陈,男","华,女","婷,女"};
         list.add(s2);
         List<String> list1 = new ArrayList<>();
         for (String[] strings1 : list) {

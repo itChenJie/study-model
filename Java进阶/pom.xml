@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>Java进阶</artifactId>
+    <artifactId>Java_Advanced</artifactId>
 
     <dependencies>
         <dependency>

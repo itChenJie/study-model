@@ -29,7 +29,7 @@ public class HandlerBeanProcessor implements BeanPostProcessor, ApplicationConte
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
         if (bean instanceof DefaultPipeline){
             DefaultPipeline pipeline = (DefaultPipeline) bean;
-            Map<String, ? extends DefaultPipeline> beans = applicationContext.getBeansOfType(pipeline.getClass());
+            Map<String, Handler> beans = applicationContext.getBeansOfType(Handler.class);
             beans.forEach((name,handler) -> pipeline.addHandler((Handler) handler));
         }
         return bean;

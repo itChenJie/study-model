@@ -1,0 +1,48 @@
+@startuml
+
+interface Handler{
+    retrieveData(HandlerContext ctx,Object object)
+
+    filter(HandlerContext ctx,Object object)
+
+    execute(HandlerContext ctx,Object object)
+
+    exceptionCaught(HandlerContext ctx,Throwable throwable)
+}
+
+class HandlerContext{
+      HandlerContext prev
+      HandlerContext next
+
+      retrieveData(Object object)
+
+      invokeRetrieveData(HandlerContext ctx,Object object)
+
+      filter(Object object)
+
+      invokeFilter(HandlerContext ctx,Object object)
+
+      execute(Object object)
+
+      invokeExecute(HandlerContext ctx,Object object)
+
+      exceptionCaught(Throwable throwable)
+
+      invokeExceptionCaught(HandlerContext ctx,Throwable throwable)
+}
+
+class Pipeline{
+    retrieveDataTask()
+    filterTask()
+    executeTask()
+}
+
+class DefaultPipeline{
+
+}
+
+Pipeline <|-- DefaultPipeline
+
+Handler <|-- HandlerContext
+
+@enduml
