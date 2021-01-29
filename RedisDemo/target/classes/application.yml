@@ -1,7 +1,8 @@
 spring:
   redis:
-    host: 49.233.201.120
-    password: zaq!@#456.
+    host: 127.0.0.1
+    #password: zaq!@#456.
     port: 6379
+    password:
 #database连接O库 不设置则默认连接O库
     database: 0
