@@ -23,8 +23,8 @@ public class CountDownLatchDemo {
         CountDownLatch countDownLatch = new CountDownLatch(6);
         for (int i=1;i<=6;i++) {
 
-            new Thread(()->{
                 System.out.println(Thread.currentThread().getName() + "\t国，被灭");
+            new Thread(()->{
                 //没循环一次减一
                 countDownLatch.countDown();
             }, CountryEnum.forEach_CountryEnum(i).getRetMessage()).start();

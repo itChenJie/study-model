@@ -29,8 +29,8 @@ public class AsyncPoolConfig implements AsyncConfigurer {
     @Override
     public Executor getAsyncExecutor(){
         ThreadPoolTaskExecutor taskExecutor = new ThreadPoolTaskExecutor();
-        //线程池的基本大小
-        taskExecutor.setCorePoolSize(10);
+        //核心线程大小
+        taskExecutor.setCorePoolSize(7);
         //线程池的最大线程数
         taskExecutor.setMaxPoolSize(20);
         //缓存队列的长度
@@ -48,7 +48,6 @@ public class AsyncPoolConfig implements AsyncConfigurer {
                 //对拒绝任务抛弃处理，并且抛出异常
                 new ThreadPoolExecutor.AbortPolicy()
         );
-
         return taskExecutor;
     }
 

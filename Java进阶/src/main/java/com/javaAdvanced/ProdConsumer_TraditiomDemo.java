@@ -9,6 +9,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @Description TODO
  * @Date 2019/11/17 16:29
  * @Author ChenWenJie
+ * 生成消费
  * 题目：一个初始化为零的变量，两个线程对其交替操作，一个加1一个减1，来5轮
  * 多线程下判断使用while 不能用if应为有等待和唤醒
  */

@@ -1,3 +1,39 @@
+spring:
+  # 属性设置为此类文件的位置来更改启动时打印的横幅
+  # 如果文件的编码不是UTF-8，则可以设置spring.banner.charset
+  # 图像将转换为ASCII艺术作品并打印在任何文字横幅上方。
+  banner:
+    image:
+      location: ./banner.txt
+    lifecycle:
+      timeout-per-shutdown-phase: 40s
+  datasource:
+    username: mysql
+    password: 123456
+    url: jdbc:mysql://localhost:3306/study?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+
+  rabbitmq:
+    addresses: 127.0.0.1:5672
+    username: admin
+    password: admin
+    virtual-host: my_vhost
+    publisher-confirm-type: correlated
+    #在需要使用消息的return机制时候，此参数必须设置为true
+    template:
+      mandatory: true
+    publisher-returns: true #是否开启发送失败退回
+    listener:
+      simple:
+        concurrency: 5 #消费者数量
+        max-concurrency: 10 #最大消费者数量
+        prefetch: 1 #限流（消费者每次从队列获取的消息数量）
+        auto-startup: true  #启动时自动启动容器
+        acknowledge-mode: manual #开启ACK手动确认模式
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+
 management:
   endpoint:
     shutdown:
@@ -13,3 +49,20 @@ info:
     name: spring-boot-demo
     groupId: org.springframework.boot
     version: 2.2.7.RELEASE
+
+#启用优雅停机 并遵守spring.lifecycle.timeout-per-shutdown-phase属性中给出的超时。
+#当我们配置了优雅停机时，可能会有两种可能性：
+#   1：应用中没有正在进行的要求。在这种情况下，应用程序将会直接关闭，而无需等待宽限期结束后才关闭。
+#   2：如果应用中有正在处理的请求，则应用程序将等待宽限期结束后才能关闭。如果应用在宽限期之后仍然有待处理的请求，应用程序将抛出异常并继续强制关闭。
+server:
+  shutdown: graceful
+
+
+#自定义参数
+defineProps:
+  #MQ队列名称
+  rabbit:
+    direct:
+      exchange: product
+      routingKey: product_robbingKey
+      queue: product_queue
