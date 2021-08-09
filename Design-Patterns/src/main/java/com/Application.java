@@ -1,5 +1,9 @@
-package com.zerenlian;
+package com;
 
+import com.develop.DistributeProcessor;
+import com.develop.DistributeRequest;
+import com.develop.InitProcessor;
+import com.develop.TranscodeProcessor;
 import com.zerenlian.service.ApplicationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -26,6 +30,11 @@ public class Application {
 
     @Bean("ZZZ")
     public void test() throws FileNotFoundException {
-        service.mockedClient();
+        InitProcessor initProcessor = new InitProcessor();
+        initProcessor.setNextProcessor(new TranscodeProcessor())
+                .setNextProcessor(new DistributeProcessor());
+        initProcessor.process(new DistributeRequest());
+        //service.mockedClient();
     }
+
 }
